@@ -1,0 +1,5 @@
+{
+  "extends": "@otel-for-cf-examples/typescript-config/workers-app.json",
+  "include": ["."],
+  "exclude": ["dist", "node_modules"]
+}

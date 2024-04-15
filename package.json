@@ -1,0 +1,24 @@
+{
+  "private": true,
+  "workspaces": [
+    "examples/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "turbo run build",
+    "clean": "turbo run clean",
+    "dev": "turbo run dev --no-cache --parallel --continue",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "lint": "turbo run lint",
+    "test": "turbo run test"
+  },
+  "devDependencies": {
+    "prettier": "^3.0.0",
+    "prettier-plugin-organize-imports": "^3.2.0",
+    "turbo": "^1.6.3",
+    "typescript": "5.1.6"
+  },
+  "engines": {
+    "node": ">=16.18"
+  }
+}

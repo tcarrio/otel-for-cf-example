@@ -1,0 +1,19 @@
+{
+  "name": "@otel-for-cf-examples/wrangler-otel",
+  "version": "1.0.1",
+  "dependencies": {
+    "@microlabs/otel-cf-workers": "^1.0.0-rc.36"
+  },
+  "devDependencies": {
+    "@otel-for-cf-examples/eslint-config-base": "*",
+    "@otel-for-cf-examples/typescript-config": "*",
+    "wrangler": "2.5.0"
+  },
+  "private": true,
+  "scripts": {
+    "start": "wrangler dev --experimental-local",
+    "deploy": "wrangler publish",
+    "build": "wrangler publish --dry-run --outdir=dist",
+    "lint": "eslint src"
+  }
+}

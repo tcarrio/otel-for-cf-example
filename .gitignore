@@ -1,0 +1,13 @@
+# npm / yarn
+node_modules
+yarn-error.log
+
+# typescript
+dist
+
+# turbo
+.turbo
+.cache
+
+# direnv 
+.direnv
