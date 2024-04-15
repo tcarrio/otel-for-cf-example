@@ -35,3 +35,7 @@ yarn start
 ```
 
 Runs the worker locally.
+
+<!-- References -->
+
+[OpenTelemetry Collector]: https://opentelemetry.io/docs/collector/
