@@ -1,4 +1,4 @@
-# otel-for-cf-examples
+# otel-for-cf-example
 
 [OpenTelemetry](https://opentelemetry.io/) is an open standard and suite of APIs and SDKs that provides functionality for logging, tracing, and metrics across various languages.
 
