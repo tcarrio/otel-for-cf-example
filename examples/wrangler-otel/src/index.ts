@@ -1,20 +1,11 @@
 import { instrument, ResolveConfigFn } from '@microlabs/otel-cf-workers';
-
-export interface Env {
-  OTEL_SERVICE_NAME: string;
-  OTEL_COLLECTOR_URL: string;
-  OTEL_COLLECTOR_API_KEY?: string;
-}
+import { Env } from './types';
+import { fetchHandler, queueHandler, scheduledHandler } from './handlers';
 
 const handler = {
-  async fetch(
-    request: Request,
-    env: Env,
-    ctx: ExecutionContext,
-	  // @ts-ignore
-  ): Promise<Response> {
-    // your cloudflare worker code
-  },
+  fetch: fetchHandler,
+  queue: queueHandler,
+  scheduled: scheduledHandler,
 };
 
 const config: ResolveConfigFn = (env: Env, _trigger) => {

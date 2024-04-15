@@ -1,5 +1,8 @@
 name = "wrangler-basic"
+
+# Fetch handler is defined here
 main = "src/index.ts"
+
 compatibility_date = "2022-11-11"
 compatibility_flags = ["nodejs_compat"]
 
@@ -7,3 +10,17 @@ compatibility_flags = ["nodejs_compat"]
 OTEL_SERVICE_NAME=
 OTEL_COLLECTOR_URL=
 OTEL_COLLECTOR_API_KEY=
+
+# Scheduled Handlers:
+[triggers]
+# protip: crontab.guru
+# “At 00:00 on every 3rd day-of-month.”
+crons = [ "* * 3 * *" ]
+
+# Queue Handlers
+[[queues.consumers]]
+  queue = "my-queue"
+  max_batch_size = 10
+  max_batch_timeout = 30
+  max_retries = 10
+  dead_letter_queue = "my-queue-dlq"
