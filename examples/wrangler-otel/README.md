@@ -8,8 +8,8 @@ This is an OpenTelemetry starter that uses [wrangler](https://github.com/cloudfl
   - Run `yarn` to install all packages in this project.
 - [Cloudflare](https://dash.cloudflare.com/sign-up) account.
   - Run `yarn wrangler login` to associate `wrangler` with your Cloudflare account.
-- [OpenTelemetry](https://opentelemetry.io/) account.
-  - Create a new OpenTelemetry project. Choose `javascript` as the platform.
+- [OpenTelemetry](https://opentelemetry.io/) collector.
+  - The collector receives all metadata from the Workers and must be accessible to them.
 
 ## Client setup
 
