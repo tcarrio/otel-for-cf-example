@@ -4,7 +4,15 @@ name = "wrangler-basic"
 main = "src/index.ts"
 
 compatibility_date = "2022-11-11"
-compatibility_flags = ["nodejs_compat"]
+
+# otel config
+compatibility_flags = [ "nodejs_compat" ]
+rules = [
+  { type = "CommonJS", globs = ["**/*.js"], fallthrough = true },
+  { type = "ESModule", globs = ["**/*.js"], fallthrough = true },
+]
+# [build.esbuild]
+# bundle = { external = ["", "module2"] }
 
 [vars]
 OTEL_SERVICE_NAME=""
