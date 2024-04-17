@@ -7,9 +7,9 @@ compatibility_date = "2022-11-11"
 compatibility_flags = ["nodejs_compat"]
 
 [vars]
-OTEL_SERVICE_NAME=
-OTEL_COLLECTOR_URL=
-OTEL_COLLECTOR_API_KEY=
+OTEL_SERVICE_NAME=""
+OTEL_COLLECTOR_URL=""
+OTEL_COLLECTOR_API_KEY=""
 
 # Scheduled Handlers:
 [triggers]
